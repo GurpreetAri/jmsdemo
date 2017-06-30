@@ -1,0 +1,32 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.4.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-activemq')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-activemq
+	//compile group: 'org.springframework.boot', name: 'spring-boot-starter-activemq', version: '1.4.0.RELEASE'
+    //classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
+
+}
